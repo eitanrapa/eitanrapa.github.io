@@ -9,9 +9,10 @@ Static HTML and CSS — no build step. Push to `main` and GitHub Pages publishes
 ```
 index.html              Home — about, contact, academic experience
 research/index.html     Research
+research/slip-models/   Coseismic slip models (one article per earthquake)
 publications/index.html Publications
 assets/css/style.css    All styling
-assets/img/             Images
+assets/img/             Images (slip/: the slip-model figures)
 assets/cv/              CV (PDF)
 ```
 

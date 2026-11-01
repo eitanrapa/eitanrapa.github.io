@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coseismic Slip Models &ndash; Eitan Rapaport Bruck</title>
+<meta name="description" content="Finite-fault slip models of recent large earthquakes from space geodesy (NISAR, Sentinel-1, ALOS-2, GNSS), by Eitan Rapaport Bruck.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap wrap--wide">
+    <p class="site-title"><a href="../../">Eitan Rapaport Bruck</a></p>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../../">Home</a></li>
+        <li><a href="../" aria-current="page">Research</a></li>
+        <li><a href="../../publications/">Publications</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="page">
+      <h1>Coseismic Slip Models</h1>
+
+      <div class="page-intro">
+        <p>Slip models of recent large earthquakes, inverted from space-geodetic measurements of the ground's
+        displacement: L-band interferometry from NISAR and ALOS-2, Sentinel-1 interferograms and pixel offsets, and
+        GNSS. Each model finds the distribution of slip on one or more fault surfaces in a layered elastic Earth.</p>
+        <p>All models use one framework. The Green's functions are exact for triangular elements in a layered crust.
+        The meshes are triangulations adapted to the resolution the data provide. The smoothing, and where tested
+        the fault dips and depth extent, are chosen by spatially blocked cross-validation. Slip is bounded and solved
+        exactly. NISAR data are processed from the single-look complex images with our own split-spectrum
+        ionospheric correction (<a href="https://github.com/eitanrapa/nisar_tools">nisar_tools</a>).</p>
+      </div>
+
+      <ul class="event-index" aria-label="Earthquakes on this page">
+        <li><a href="#panama-2026">2026 Herrera, Panama (Mw 7.7)</a></li>
+        <li><a href="#venezuela-2026">2026 La Guaira doublet, Venezuela (Mw 7.2, 7.5)</a></li>
+        <li><a href="#turkiye-2023">2023 Kahramanmaraş doublet, Türkiye (Mw 7.8, 7.7)</a></li>
+      </ul>
+
+      <article class="project" id="panama-2026">
+        <h2>2026 Herrera Earthquake, Panama</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>9 October 2026; Mw 7.7 (USGS)</dd>
+          <dt>Our model</dt>
+          <dd>Mw 7.68; peak slip 9.4 m, on the Azuero fault at about 8 km depth</dd>
+          <dt>Faults</dt>
+          <dd>Three sheets of the Azuero&ndash;Soná fault system (the main Azuero&ndash;Soná sheet, the Azuero fault and
+          GEM fault 194), north-dipping, to 20 km depth, meeting at their junctions; left-lateral strike-slip</dd>
+          <dt>Data</dt>
+          <dd>NISAR, four tracks (two ascending, two descending), processed from SLCs with our ionospheric
+          correction</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/panama_2026.png"><img src="../../assets/img/slip/panama_2026.png" alt="Slip on three fault sheets of the 2026 Herrera, Panama earthquake, against distance along strike and depth" loading="lazy"></a>
+          <figcaption>Slip magnitude on each sheet, against distance along strike and depth. The white notches are where one
+          sheet ends against another.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project" id="venezuela-2026">
+        <h2>2026 La Guaira Earthquake Doublet, Venezuela</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>24 June 2026; Mww 7.2 and Mww 7.5, 33 seconds apart (USGS)</dd>
+          <dt>Our model</dt>
+          <dd>Mw 7.60 for the two events together (every image spans both); peak slip 3.4 m</dd>
+          <dt>Fault</dt>
+          <dd>The San Sebastián fault, right-lateral strike-slip, about 240 km long, vertical, to 35 km depth, with a
+          softer north block above 25 km (rigidity ratio 1.6)</dd>
+          <dt>Data</dt>
+          <dd>NISAR, four tracks, processed from SLCs with our ionospheric correction; ALOS-2, three tracks</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/venezuela_2026.png"><img src="../../assets/img/slip/venezuela_2026.png" alt="Perspective view of slip on the San Sebastián fault for the 2026 Venezuela earthquake doublet" loading="lazy"></a>
+          <figcaption>Slip magnitude on the San Sebastián fault in a perspective view, with the mesh.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project" id="turkiye-2023">
+        <h2>2023 Kahramanmaraş Earthquake Doublet, Türkiye</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>6 February 2023; Mw 7.8 (01:17 UTC) and Mw 7.7 (10:24 UTC)</dd>
+          <dt>Our model</dt>
+          <dd>Mw 7.84 and 7.69; peak slip 7.9 m (Pazarcık segment) and 8.3 m (Çardak fault)</dd>
+          <dt>Faults</dt>
+          <dd>The East Anatolian Fault (Amanos, Pazarcık and Erkenek segments, vertical), the Narlı fault, the Çardak
+          fault (dipping 65° north) and a north&ndash;south strand, to 26 km depth; the dips and depth chosen by
+          cross-validation</dd>
+          <dt>Data</dt>
+          <dd>Sentinel-1 range and azimuth offsets on four tracks (Ou et al., 2024), Sentinel-1 interferograms in the
+          far field (COMET LiCSAR), and GNSS for each event separately (Nevada Geodetic Laboratory)</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/turkiye_2023.png"><img src="../../assets/img/slip/turkiye_2023.png" alt="Slip on the four fault sheets of the 2023 Kahramanmaraş earthquake doublet, with a map of the segments" loading="lazy"></a>
+          <figcaption>Slip magnitude on each fault, against distance along strike and depth, with each segment's moment
+          and a map of the segments. The dashed line is the Çardak fault at 26 km depth.</figcaption>
+        </figure>
+      </article>
+
+      <div class="page-note">
+        <p>These models are research products and will change as the data and methods improve. Last updated
+        1 November 2026.</p>
+        <p>Data: NISAR (NASA/ISRO) through the Alaska Satellite Facility; ALOS-2 (JAXA); Copernicus Sentinel-1 (ESA),
+        with interferograms from COMET LiCSAR and offsets from Ou, Lazecký, Watson, Maghsoudi and Wright (2024, CEDA);
+        GNSS from the Nevada Geodetic Laboratory; earthquake parameters from the USGS.</p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
