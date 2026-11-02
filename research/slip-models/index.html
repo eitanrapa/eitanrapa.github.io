@@ -34,7 +34,9 @@
         <p>Slip models of recent large earthquakes, inverted from space-geodetic measurements of the ground's
         displacement: L-band interferometry from NISAR and ALOS-2, Sentinel-1 interferograms and pixel offsets, and
         GNSS. Each model finds the distribution of slip on one or more fault surfaces in a layered elastic Earth.</p>
-        <p>All models use one framework. The Green's functions are exact for triangular elements in a layered crust.
+        <p>All models use one inversion framework
+        (<a href="https://github.com/eitanrapa/SlipSolve-Python">SlipSolve-Python</a>). The Green's functions are
+        exact for triangular elements in a layered crust.
         The meshes are triangulations adapted to the resolution the data provide. The smoothing, and where tested
         the fault dips and depth extent, are chosen by spatially blocked cross-validation. Slip is bounded and solved
         exactly. NISAR data are processed from the single-look complex images with our own split-spectrum
