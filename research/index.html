@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research &ndash; Eitan Rapaport Bruck</title>
-<meta name="description" content="Research by Eitan Rapaport Bruck — the Planetary Exploration Twin (PET) framework applied to Enceladus and InSAR measurement of crustal deformation, and coseismic slip models of recent large earthquakes.">
+<meta name="description" content="Research by Eitan Rapaport Bruck — surface deformation of California from Sentinel-1 InSAR and GNSS, coseismic slip models of recent large earthquakes, and the Planetary Exploration Twin (PET) framework applied to Enceladus.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -31,10 +31,18 @@
       <h1>Research</h1>
 
       <article class="project">
-        <h2>Planetary Exploration Twin: Enceladus</h2>
+        <h2>Surface Deformation of California from InSAR and GNSS</h2>
         <hr>
-        <p>The <strong>Planetary Exploration Twin (PET)</strong> is a data-driven, modular framework that integrates science objectives, instrument design, resource management, and operational planning to assess data sufficiency and iteratively optimize mission parameters and concepts of operation. While applicable to any planetary body, my current focus is on Saturn's moon Enceladus and the use of interferometric synthetic aperture radar (InSAR) to measure crustal deformation.</p>
-        <p>By combining shape, ephemeris, and topography data from <em>Cassini</em> with finite element models of Enceladus's interior, methods for inferring crustal thickness from surface deformation, and detailed instrument and orbital specifications, we generate synthetic interferograms that are sensitive to topography, deformation, surface properties, and noise sources. From these, time series and inverse models of ice shell thickness can be reconstructed to evaluate and forecast the mission's scientific performance.</p>
+        <p>California deforms across the plate boundary, over pumped aquifers in the Central Valley, and in earthquakes and slow aseismic events. Sentinel-1 radar interferometry maps this motion along the satellite's line of sight, and hundreds of GNSS stations measure it in three dimensions at points. We combine the two in one inversion: nine Sentinel-1 tracks from 2014 to 2026 and the GNSS positions together give east, north and up velocities and a displacement time series at any point.</p>
+        <p>The velocity is a joint collocation of the tracks' rate maps with the GNSS, on top of the compact vertical signals a U-Net recovers from the radar data: nonlinear, non-Gaussian features such as subsidence bowls and transients that a Gaussian collocation would smooth away. The time series model each term (rate, seasonal cycles, coseismic steps such as Ridgecrest 2019, and aseismic transients found in the radar data) as a three-dimensional field.</p>
+        <figure class="slip-figure">
+          <a href="../assets/img/research/california_velocity_enu.webp"><img src="../assets/img/research/california_velocity_enu.webp" alt="East, north and up velocity of California relative to stable North America" loading="lazy"></a>
+          <figcaption><strong>Velocity.</strong> East, north and up velocity of California relative to stable North America, from nine Sentinel-1 tracks and GNSS; dots are the GNSS stations. Groundwater subsidence in the Central Valley dominates the vertical.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../assets/img/research/california_velocity_los.webp"><img src="../assets/img/research/california_velocity_los.webp" alt="Line-of-sight velocity of the ascending and descending Sentinel-1 tracks over California" loading="lazy"></a>
+          <figcaption><strong>Line of sight.</strong> Each track's velocity along the satellite's line of sight, positive toward the satellite and relative to stable North America: the ascending tracks (left) and the descending tracks (right).</figcaption>
+        </figure>
       </article>
 
       <article class="project">
@@ -42,6 +50,12 @@
         <hr>
         <p>Large earthquakes leave the slip on their faults imprinted in the displacement of the ground's surface. We invert space-geodetic measurements of that displacement for the distribution of slip on the faults that ruptured. The data are L-band interferometry from NISAR and ALOS-2, Sentinel-1 interferograms and pixel offsets, and GNSS. The models use layered elastic Earth models, meshes adapted to the data's resolution, and fault geometries tested against the data.</p>
         <p><a class="button" href="slip-models/">Slip models of recent earthquakes</a></p>
+      </article>
+
+      <article class="project">
+        <h2>Planetary Exploration Twin: Enceladus</h2>
+        <hr>
+        <p>The <strong>Planetary Exploration Twin (PET)</strong> is a data-driven, modular framework that integrates science objectives, instrument design, resource management, and operational planning to assess data sufficiency and iteratively optimize mission parameters and concepts of operation. While applicable to any planetary body, my current focus is on Saturn's moon Enceladus and the use of interferometric synthetic aperture radar (InSAR) to measure crustal deformation.</p>
       </article>
 
     </div>
