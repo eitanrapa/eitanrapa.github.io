@@ -40,64 +40,69 @@
         The meshes are triangulations adapted to the resolution the data provide. The smoothing, and where tested
         the fault dips and depth extent, are chosen by spatially blocked cross-validation. Slip is bounded and solved
         exactly. NISAR data are processed from the single-look complex images with our own split-spectrum
-        ionospheric correction (<a href="https://github.com/eitanrapa/nisar_tools">nisar_tools</a>).</p>
+        ionospheric correction (<a href="https://github.com/eitanrapa/nisar_tools">nisar_tools</a>). Each model can be
+        downloaded: the nodes and triangles of its mesh with their slip, as CSV.</p>
       </div>
 
       <ul class="event-index" aria-label="Earthquakes on this page">
-        <li><a href="#panama-2026">2026 Herrera, Panama (Mw 7.7)</a></li>
-        <li><a href="#venezuela-2026">2026 Venezuela (Mw 7.6)</a></li>
+        <li><a href="#panama-2026">2026 Azuero&ndash;Soná, Panama (Mw 7.7)</a></li>
+        <li><a href="#venezuela-2026">2026 San Sebastián, Venezuela (Mw 7.6)</a></li>
         <li><a href="#turkiye-2023">2023 Kahramanmaraş doublet, Türkiye (Mw 7.8, 7.7)</a></li>
       </ul>
 
       <article class="project" id="panama-2026">
-        <h2>2026 Herrera Earthquake, Panama</h2>
+        <h2>2026 Azuero&ndash;Soná Earthquake, Panama</h2>
         <hr>
         <dl class="facts">
           <dt>Date</dt>
           <dd>9 October 2026; Mw 7.7 (USGS)</dd>
           <dt>Our model</dt>
-          <dd>Mw 7.68; peak slip 9.4 m, on the Azuero fault at about 8 km depth</dd>
+          <dd>Mw 7.80; peak slip 11.1 m, on the Azuero fault at about 7 km depth</dd>
           <dt>Faults</dt>
           <dd>Three sheets of the Azuero&ndash;Soná fault system (the main Azuero&ndash;Soná sheet, the Azuero fault and
-          GEM fault 194), north-dipping, to 20 km depth, meeting at their junctions; left-lateral strike-slip</dd>
+          GEM fault 194), dipping 40&ndash;80° north, to 20 km depth; the Azuero&ndash;Soná sheet ends on the
+          through-going Azuero fault; left-lateral strike-slip</dd>
           <dt>Data</dt>
           <dd>NISAR, four tracks (two ascending, two descending), processed from SLCs with our ionospheric
           correction</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/panama_2026_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.14 MB)</dd>
         </dl>
         <figure class="slip-figure">
-          <a href="../../assets/img/slip/panama_2026/slip.webp"><img src="../../assets/img/slip/panama_2026/slip.webp" alt="Slip on the fault sheets of the 2026 Herrera, Panama earthquake, and a map of their traces" loading="lazy"></a>
+          <a href="../../assets/img/slip/panama_2026/slip.webp"><img src="../../assets/img/slip/panama_2026/slip.webp" alt="Slip on the fault sheets of the 2026 Azuero&ndash;Soná, Panama earthquake, and a map of their traces" loading="lazy"></a>
           <figcaption><strong>Slip.</strong> (A) Slip magnitude on each fault sheet against distance along strike and depth, all at one scale, with each sheet's moment magnitude and peak slip. (B) The sheets' surface traces on a shaded-relief map, coloured as their labels in A; dashed lines are the bottom edges of the north-dipping sheets, at 20 km; stars mark the USGS epicentre.</figcaption>
         </figure>
         <figure class="slip-figure">
-          <a href="../../assets/img/slip/panama_2026/geometry.webp"><img src="../../assets/img/slip/panama_2026/geometry.webp" alt="Three-dimensional view of the fault sheets of the 2026 Herrera, Panama earthquake, coloured by slip" loading="lazy"></a>
+          <a href="../../assets/img/slip/panama_2026/geometry.webp"><img src="../../assets/img/slip/panama_2026/geometry.webp" alt="Three-dimensional view of the fault sheets of the 2026 Azuero&ndash;Soná, Panama earthquake, coloured by slip" loading="lazy"></a>
           <figcaption><strong>Geometry.</strong> The fault sheets in three dimensions, coloured by slip, with the mesh, the surface traces, the coastline and the hypocentres; depth exaggerated ×2.</figcaption>
         </figure>
         <details class="slip-more">
           <summary>The data: interferograms, GNSS and pixel offsets</summary>
           <figure class="slip-figure">
-            <a href="../../assets/img/slip/panama_2026/insar.webp"><img src="../../assets/img/slip/panama_2026/insar.webp" alt="Interferograms of the 2026 Herrera, Panama earthquake, as processed and corrected" loading="lazy"></a>
-            <figcaption><strong>Interferograms.</strong> Each track (A) as processed, (B) our split-spectrum ionospheric screen, estimated from the two NISAR sub-bands, and (C) corrected: the screen and the inversion's ramp removed, on the inversion's own lattice (south of 8°10′N). Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
+            <a href="../../assets/img/slip/panama_2026/insar.webp"><img src="../../assets/img/slip/panama_2026/insar.webp" alt="Interferograms of the 2026 Azuero&ndash;Soná, Panama earthquake, as processed and corrected" loading="lazy"></a>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as processed, (B) our split-spectrum ionospheric screen, estimated from the two NISAR sub-bands, and (C) corrected: the screen and the inversion's ramp removed, on the inversion's own lattice (south of 8°39′N). Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
           </figure>
           <figure class="slip-figure">
-            <a href="../../assets/img/slip/panama_2026/gnss_offsets.webp"><img src="../../assets/img/slip/panama_2026/gnss_offsets.webp" alt="GNSS displacements and pixel offsets for the 2026 Herrera, Panama earthquake" loading="lazy"></a>
+            <a href="../../assets/img/slip/panama_2026/gnss_offsets.webp"><img src="../../assets/img/slip/panama_2026/gnss_offsets.webp" alt="GNSS displacements and pixel offsets for the 2026 Azuero&ndash;Soná, Panama earthquake" loading="lazy"></a>
             <figcaption><strong>GNSS and pixel offsets.</strong> (A) No GNSS displacements yet: the Nevada Geodetic Laboratory's series for the nearest stations end before the earthquake. Below, each NISAR track's pixel offsets in range and along track, each map's median removed. The offsets were not used in the inversion.</figcaption>
           </figure>
         </details>
         <details class="slip-more">
           <summary>Fits to the data and uncertainty</summary>
           <figure class="slip-figure">
-            <a href="../../assets/img/slip/panama_2026/fits.webp"><img src="../../assets/img/slip/panama_2026/fits.webp" alt="Data, model and residual for the 2026 Herrera, Panama earthquake" loading="lazy"></a>
+            <a href="../../assets/img/slip/panama_2026/fits.webp"><img src="../../assets/img/slip/panama_2026/fits.webp" alt="Data, model and residual for the 2026 Azuero&ndash;Soná, Panama earthquake" loading="lazy"></a>
             <figcaption><strong>Fits.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
           </figure>
           <figure class="slip-figure">
-            <a href="../../assets/img/slip/panama_2026/uncertainty.webp"><img src="../../assets/img/slip/panama_2026/uncertainty.webp" alt="Uncertainty of slip for the 2026 Herrera, Panama earthquake" loading="lazy"></a>
+            <a href="../../assets/img/slip/panama_2026/uncertainty.webp"><img src="../../assets/img/slip/panama_2026/uncertainty.webp" alt="Uncertainty of slip for the 2026 Azuero&ndash;Soná, Panama earthquake" loading="lazy"></a>
             <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise covariance is fitted to its residuals by restricted maximum likelihood and propagated through the final inversion, linearised about its solution.</figcaption>
           </figure>
         </details>
       </article>
 
       <article class="project" id="venezuela-2026">
-        <h2>2026 Venezuela Earthquake</h2>
+        <h2>2026 San Sebastián Earthquake, Venezuela</h2>
         <hr>
         <dl class="facts">
           <dt>Date</dt>
@@ -106,38 +111,41 @@
           <dt>Our model</dt>
           <dd>Mw 7.60 for the whole rupture (every image spans both stages); peak slip 3.4 m</dd>
           <dt>Fault</dt>
-          <dd>The San Sebastián fault, right-lateral strike-slip, about 240 km long, vertical, to 35 km depth, with a
+          <dd>The San Sebastián fault, right-lateral strike-slip, about 260 km long, vertical, to 35 km depth, with a
           softer north block above 25 km (rigidity ratio 1.6)</dd>
           <dt>Data</dt>
           <dd>NISAR, four tracks, processed from SLCs with our ionospheric correction; ALOS-2, three tracks</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/venezuela_2026_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.15 MB)</dd>
         </dl>
         <figure class="slip-figure">
-          <a href="../../assets/img/slip/venezuela_2026/slip.webp"><img src="../../assets/img/slip/venezuela_2026/slip.webp" alt="Slip on the fault sheets of the 2026 Venezuela earthquake, and a map of their traces" loading="lazy"></a>
+          <a href="../../assets/img/slip/venezuela_2026/slip.webp"><img src="../../assets/img/slip/venezuela_2026/slip.webp" alt="Slip on the fault sheets of the 2026 San Sebastián, Venezuela earthquake, and a map of their traces" loading="lazy"></a>
           <figcaption><strong>Slip.</strong> (A) Slip magnitude on each fault sheet against distance along strike and depth, all at one scale, with each sheet's moment magnitude and peak slip. (B) The sheets' surface traces on a shaded-relief map, coloured as their labels in A; stars mark the USGS epicentres (Mww 7.2, then Mww 7.5 33 seconds later).</figcaption>
         </figure>
         <figure class="slip-figure">
-          <a href="../../assets/img/slip/venezuela_2026/geometry.webp"><img src="../../assets/img/slip/venezuela_2026/geometry.webp" alt="Three-dimensional view of the fault sheets of the 2026 Venezuela earthquake, coloured by slip" loading="lazy"></a>
+          <a href="../../assets/img/slip/venezuela_2026/geometry.webp"><img src="../../assets/img/slip/venezuela_2026/geometry.webp" alt="Three-dimensional view of the fault sheets of the 2026 San Sebastián, Venezuela earthquake, coloured by slip" loading="lazy"></a>
           <figcaption><strong>Geometry.</strong> The fault sheets in three dimensions, coloured by slip, with the mesh, the surface traces, the coastline and the hypocentres; depth exaggerated ×2.</figcaption>
         </figure>
         <details class="slip-more">
           <summary>The data: interferograms, GNSS and pixel offsets</summary>
           <figure class="slip-figure">
-            <a href="../../assets/img/slip/venezuela_2026/insar.webp"><img src="../../assets/img/slip/venezuela_2026/insar.webp" alt="Interferograms of the 2026 Venezuela earthquake, as processed and corrected" loading="lazy"></a>
+            <a href="../../assets/img/slip/venezuela_2026/insar.webp"><img src="../../assets/img/slip/venezuela_2026/insar.webp" alt="Interferograms of the 2026 San Sebastián, Venezuela earthquake, as processed and corrected" loading="lazy"></a>
             <figcaption><strong>Interferograms.</strong> Each track (A) as processed, (B) our split-spectrum ionospheric screen, estimated from the two NISAR sub-bands (ALOS-2 has a single band, so no screen), and (C) corrected: the screen and the inversion's ramp removed, on the inversion's own lattice. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
           </figure>
           <figure class="slip-figure">
-            <a href="../../assets/img/slip/venezuela_2026/gnss_offsets.webp"><img src="../../assets/img/slip/venezuela_2026/gnss_offsets.webp" alt="GNSS displacements and pixel offsets for the 2026 Venezuela earthquake" loading="lazy"></a>
+            <a href="../../assets/img/slip/venezuela_2026/gnss_offsets.webp"><img src="../../assets/img/slip/venezuela_2026/gnss_offsets.webp" alt="GNSS displacements and pixel offsets for the 2026 San Sebastián, Venezuela earthquake" loading="lazy"></a>
             <figcaption><strong>GNSS and pixel offsets.</strong> (A) GNSS displacements at continuous stations (Nevada Geodetic Laboratory, as released by Li et al., 2026), observed (black) and predicted by our model (red); the longest arrows are shortened and labelled with their length. Below, each NISAR track's pixel offsets in range and along track, each map's median removed. Neither the GNSS nor the offsets were used in the inversion: they test it.</figcaption>
           </figure>
         </details>
         <details class="slip-more">
           <summary>Fits to the data and uncertainty</summary>
           <figure class="slip-figure">
-            <a href="../../assets/img/slip/venezuela_2026/fits.webp"><img src="../../assets/img/slip/venezuela_2026/fits.webp" alt="Data, model and residual for the 2026 Venezuela earthquake" loading="lazy"></a>
+            <a href="../../assets/img/slip/venezuela_2026/fits.webp"><img src="../../assets/img/slip/venezuela_2026/fits.webp" alt="Data, model and residual for the 2026 San Sebastián, Venezuela earthquake" loading="lazy"></a>
             <figcaption><strong>Fits.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
           </figure>
           <figure class="slip-figure">
-            <a href="../../assets/img/slip/venezuela_2026/uncertainty.webp"><img src="../../assets/img/slip/venezuela_2026/uncertainty.webp" alt="Uncertainty of slip for the 2026 Venezuela earthquake" loading="lazy"></a>
+            <a href="../../assets/img/slip/venezuela_2026/uncertainty.webp"><img src="../../assets/img/slip/venezuela_2026/uncertainty.webp" alt="Uncertainty of slip for the 2026 San Sebastián, Venezuela earthquake" loading="lazy"></a>
             <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise covariance is fitted to its residuals by restricted maximum likelihood and propagated through the final inversion, linearised about its solution. It was computed on the scaled-contrast solve; the slip shown is the exact bimaterial re-solve on the same mesh and samples.</figcaption>
           </figure>
         </details>
@@ -158,6 +166,9 @@
           <dt>Data</dt>
           <dd>Sentinel-1 range and azimuth offsets on four tracks (Ou et al., 2024), Sentinel-1 interferograms on five
           tracks in the far field (COMET LiCSAR), and GNSS for each event separately (Nevada Geodetic Laboratory)</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/turkiye_2023_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.19 MB)</dd>
         </dl>
         <figure class="slip-figure">
           <a href="../../assets/img/slip/turkiye_2023/slip.webp"><img src="../../assets/img/slip/turkiye_2023/slip.webp" alt="Slip on the fault sheets of the 2023 Kahramanmaraş earthquake doublet, and a map of their traces" loading="lazy"></a>
