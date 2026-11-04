@@ -47,6 +47,7 @@
       <ul class="event-index" aria-label="Earthquakes on this page">
         <li><a href="#panama-2026">2026 Azuero&ndash;Soná, Panama (Mw 7.7)</a></li>
         <li><a href="#venezuela-2026">2026 San Sebastián, Venezuela (Mw 7.6)</a></li>
+        <li><a href="#myanmar-2025">2025 Mandalay, Myanmar (Mw 7.7)</a></li>
         <li><a href="#turkiye-2023">2023 Kahramanmaraş doublet, Türkiye (Mw 7.8, 7.7)</a></li>
       </ul>
 
@@ -151,6 +152,66 @@
         </details>
       </article>
 
+      <article class="project" id="myanmar-2025">
+        <h2>2025 Mandalay Earthquake, Myanmar</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>28 March 2025, 06:20 UTC; Mw 7.7</dd>
+          <dt>Our model</dt>
+          <dd>Mw 7.90 with the east block's rigidity (7.88 with the two sides' mean above 10 km); peak slip 5.6 m, near
+          Mandalay and the epicentre</dd>
+          <dt>Fault</dt>
+          <dd>The Sagaing fault over 504 km, vertical in the south and dipping east to 60° in the north, to 30 km depth;
+          the dips and depth chosen by cross-validation. The block west of the fault is 1.3 times softer above 10 km,
+          as seismic velocities across the fault indicate (Xu et al., 2025), with the contrast solved exactly</dd>
+          <dt>Data</dt>
+          <dd>Two ALOS-2 interferograms, and range and azimuth offsets on four Sentinel-1 tracks and one LuTan-1 track
+          (Xu et al., 2025)</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/myanmar_2025_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.16 MB)</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/myanmar_2025/slip.webp"><img src="../../assets/img/slip/myanmar_2025/slip.webp" alt="Slip on the Sagaing fault in the 2025 Mandalay earthquake, and a map of its trace" loading="lazy"></a>
+          <figcaption><strong>Slip.</strong> (A) Slip magnitude on the Sagaing fault against distance along strike, from its southern end, and depth, with the moment magnitude and peak slip. (B) The trace on a shaded-relief map; the dashed line is the fault's bottom edge at 30 km, east of the trace where the fault dips east; the star marks the USGS epicentre.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/myanmar_2025/geometry.webp"><img src="../../assets/img/slip/myanmar_2025/geometry.webp" alt="Three-dimensional view of the Sagaing fault in the 2025 Mandalay earthquake, coloured by slip" loading="lazy"></a>
+          <figcaption><strong>Geometry.</strong> The fault in three dimensions, coloured by slip, with the mesh, the surface trace and the hypocentre; depth exaggerated ×2.</figcaption>
+        </figure>
+        <details class="slip-more">
+          <summary>The data: interferograms and pixel offsets</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/myanmar_2025/insar.webp"><img src="../../assets/img/slip/myanmar_2025/insar.webp" alt="Interferograms of the 2025 Mandalay earthquake, as processed and corrected" loading="lazy"></a>
+            <figcaption><strong>Interferograms.</strong> Each ALOS-2 track (A) as processed (Xu et al., 2025) and (B) corrected: the inversion's ramp removed. B shows the data the inversion used: coherence at least 0.3, more than 5 km from the trace. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change (12.1 cm).</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/myanmar_2025/gnss_offsets.webp"><img src="../../assets/img/slip/myanmar_2025/gnss_offsets.webp" alt="Pixel offsets for the 2025 Mandalay earthquake" loading="lazy"></a>
+            <figcaption><strong>Pixel offsets.</strong> (A) Range and (B) azimuth offsets on each Sentinel-1 and LuTan-1 track (Xu et al., 2025), each map's median removed, without the pixels whose own uncertainty exceeds twice the median. On this north&ndash;south fault the azimuth offsets record the fault-parallel motion directly. All are fitted by the model; no GNSS was used.</figcaption>
+          </figure>
+        </details>
+        <details class="slip-more">
+          <summary>Fits to the data and uncertainty</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/myanmar_2025/fits_phase.webp"><img src="../../assets/img/slip/myanmar_2025/fits_phase.webp" alt="Data, model and residual for the 2025 Mandalay earthquake: interferograms" loading="lazy"></a>
+            <figcaption><strong>Fits: interferograms.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/myanmar_2025/fits_range.webp"><img src="../../assets/img/slip/myanmar_2025/fits_range.webp" alt="Data, model and residual for the 2025 Mandalay earthquake: range offsets" loading="lazy"></a>
+            <figcaption><strong>Fits: range offsets.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/myanmar_2025/fits_azimuth.webp"><img src="../../assets/img/slip/myanmar_2025/fits_azimuth.webp" alt="Data, model and residual for the 2025 Mandalay earthquake: azimuth offsets" loading="lazy"></a>
+            <figcaption><strong>Fits: azimuth offsets.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/myanmar_2025/uncertainty.webp"><img src="../../assets/img/slip/myanmar_2025/uncertainty.webp" alt="Uncertainty of slip for the 2025 Mandalay earthquake" loading="lazy"></a>
+            <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise covariance is fitted to its residuals by restricted maximum likelihood and propagated through the final inversion, linearised about its solution.</figcaption>
+          </figure>
+        </details>
+      </article>
+
       <article class="project" id="turkiye-2023">
         <h2>2023 Kahramanmaraş Earthquake Doublet, Türkiye</h2>
         <hr>
@@ -212,7 +273,7 @@
 
       <div class="page-note">
         <p>These models are research products and will change as the data and methods improve. Last updated
-        1 November 2026.</p>
+        4 November 2026.</p>
         <p>Data: NISAR (NASA/ISRO) through the Alaska Satellite Facility; ALOS-2 (JAXA); Copernicus Sentinel-1 (ESA),
         with interferograms from COMET LiCSAR and offsets from Ou, Lazecký, Watson, Maghsoudi and Wright (2024, CEDA);
         GNSS from the Nevada Geodetic Laboratory; earthquake parameters from the USGS. Maps: shaded relief from GMT's
