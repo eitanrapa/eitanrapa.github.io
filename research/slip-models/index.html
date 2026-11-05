@@ -32,8 +32,8 @@
 
       <div class="page-intro">
         <p>Slip models of recent large earthquakes, inverted from space-geodetic measurements of the ground's
-        displacement: L-band interferometry from NISAR and ALOS-2, Sentinel-1 interferograms and pixel offsets, and
-        GNSS. Each model finds the distribution of slip on one or more fault surfaces in a layered elastic Earth.</p>
+        displacement: L-band interferometry from NISAR and ALOS-2, Sentinel-1 interferograms and pixel offsets,
+        Sentinel-2 optical offsets, and GNSS. Each model finds the distribution of slip on one or more fault surfaces in a layered elastic Earth.</p>
         <p>All models use one inversion framework
         (<a href="https://github.com/eitanrapa/SlipSolve-Python">SlipSolve-Python</a>). The Green's functions are
         exact for triangular elements in a layered crust.
@@ -49,6 +49,8 @@
         <li><a href="#venezuela-2026">2026 San Sebastián, Venezuela (Mw 7.6)</a></li>
         <li><a href="#myanmar-2025">2025 Mandalay, Myanmar (Mw 7.7)</a></li>
         <li><a href="#turkiye-2023">2023 Kahramanmaraş doublet, Türkiye (Mw 7.8, 7.7)</a></li>
+        <li><a href="#ridgecrest-2019">2019 Ridgecrest sequence, California (Mw 6.4, 7.1)</a></li>
+        <li><a href="#kaikoura-2016">2016 Kaikōura, New Zealand (Mw 7.8)</a></li>
       </ul>
 
       <article class="project" id="panama-2026">
@@ -271,12 +273,130 @@
         </details>
       </article>
 
+      <article class="project" id="ridgecrest-2019">
+        <h2>2019 Ridgecrest Earthquake Sequence, California</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>4 July 2019, 17:33 UTC, Mw 6.4, and 6 July 2019, 03:19 UTC, Mw 7.1 (USGS)</dd>
+          <dt>Our model</dt>
+          <dd>Mw 7.13 for the two earthquakes together, which every data set spans: 7.10 on the Mw 7.1's fault and 6.53 on
+          the Mw 6.4's north-east-striking fault; peak slip 6.2 m, near the middle of the Mw 7.1's fault at about 6 km
+          depth</dd>
+          <dt>Faults</dt>
+          <dd>Two vertical faults to 20 km depth: the north-west-striking, right-lateral fault of the Mw 7.1 (its trace from
+          Sentinel-2 offsets, Valkaniotis, 2019) and the north-east-striking, left-lateral fault of the Mw 6.4 (Ponti et
+          al., 2020); the dips and depth chosen by cross-validation</dd>
+          <dt>Data</dt>
+          <dd>ALOS-2 and Sentinel-1 interferograms on two tracks each (Xu, Sandwell and colleagues, UC San Diego),
+          Sentinel-2 optical offsets (Valkaniotis, 2019), and GNSS (Nevada Geodetic Laboratory)</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/ridgecrest_2019_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.06 MB)</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/ridgecrest_2019/slip.webp"><img src="../../assets/img/slip/ridgecrest_2019/slip.webp" alt="Slip on the two faults of the 2019 Ridgecrest earthquake sequence, and a map of their traces" loading="lazy"></a>
+          <figcaption><strong>Slip.</strong> (A) Slip magnitude on each fault against distance along strike and depth, both at one scale, with each fault's moment magnitude and peak slip: the Mw 7.1's fault from its north-west end, the Mw 6.4's from its south-west end. (B) The traces on a shaded-relief map, coloured as their labels in A; stars mark the USGS epicentres.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/ridgecrest_2019/geometry.webp"><img src="../../assets/img/slip/ridgecrest_2019/geometry.webp" alt="Three-dimensional view of the two faults of the 2019 Ridgecrest earthquake sequence, coloured by slip" loading="lazy"></a>
+          <figcaption><strong>Geometry.</strong> The two faults in three dimensions, seen from the south-south-west, coloured by slip, with the mesh, the surface traces and the hypocentres; depth exaggerated ×1.5.</figcaption>
+        </figure>
+        <details class="slip-more">
+          <summary>The data: interferograms, GNSS and optical offsets</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/ridgecrest_2019/insar.webp"><img src="../../assets/img/slip/ridgecrest_2019/insar.webp" alt="Interferograms of the 2019 Ridgecrest earthquake sequence, as processed and corrected" loading="lazy"></a>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as processed (Xu, Sandwell and colleagues) and (B) corrected: the inversion's ramp removed, cubic for ALOS-2 and linear for Sentinel-1. B shows the data the inversion used: more than 2 km from the faults. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/ridgecrest_2019/gnss_offsets.webp"><img src="../../assets/img/slip/ridgecrest_2019/gnss_offsets.webp" alt="GNSS displacements and optical offsets for the 2019 Ridgecrest earthquake sequence" loading="lazy"></a>
+            <figcaption><strong>GNSS and optical offsets.</strong> (A) GNSS displacements (Nevada Geodetic Laboratory), observed (black) and fitted by our model (red); the longest arrows are shortened and labelled with their length. (B, C) The east and north Sentinel-2 offsets (Valkaniotis, 2019; COSI-Corr, detrended by the author), each map's median removed. Both are fitted by the model.</figcaption>
+          </figure>
+        </details>
+        <details class="slip-more">
+          <summary>Fits to the data and uncertainty</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/ridgecrest_2019/fits_phase.webp"><img src="../../assets/img/slip/ridgecrest_2019/fits_phase.webp" alt="Data, model and residual for the 2019 Ridgecrest earthquake sequence: interferograms" loading="lazy"></a>
+            <figcaption><strong>Fits: interferograms.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/ridgecrest_2019/fits_offsets.webp"><img src="../../assets/img/slip/ridgecrest_2019/fits_offsets.webp" alt="Data, model and residual for the 2019 Ridgecrest earthquake sequence: optical offsets" loading="lazy"></a>
+            <figcaption><strong>Fits: optical offsets.</strong> The Sentinel-2 east and north samples: (A) the data with the inversion's plane removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/ridgecrest_2019/uncertainty.webp"><img src="../../assets/img/slip/ridgecrest_2019/uncertainty.webp" alt="Uncertainty of slip for the 2019 Ridgecrest earthquake sequence" loading="lazy"></a>
+            <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. A noise covariance fitted to these few hundred samples per track was not stable, so each track's noise is taken as independent at its residual rms, propagated through the final inversion, linearised about its solution. Correlated noise is left out, so this is a lower bound.</figcaption>
+          </figure>
+        </details>
+      </article>
+
+      <article class="project" id="kaikoura-2016">
+        <h2>2016 Kaikōura Earthquake, New Zealand</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>13 November 2016, 11:02 UTC; Mw 7.8 (USGS)</dd>
+          <dt>Our model</dt>
+          <dd>Mw 7.87; peak slip 12.5 m on the Kekerengu fault at 14 km depth</dd>
+          <dt>Faults</dt>
+          <dd>Six fault sheets after Xu et al. (2018), to 25 km depth: the Jordan&ndash;Kekerengu&ndash;Needles line dipping
+          north-west (its north-eastern part at 70° near the surface, flattening to 20° at 25 km; its south-western part
+          at 45°), the Stone Jug fault dipping 30° east-north-east, and the Papatea, Hundalee, North Leader and Humps
+          faults vertical; the dips and depth chosen by cross-validation</dd>
+          <dt>Data</dt>
+          <dd>ALOS-2 interferograms on two tracks and a Sentinel-1 interferogram (Tong, Xu, Sandwell and colleagues, UC San
+          Diego), GNSS (Nevada Geodetic Laboratory), and the near-field three-dimensional displacement field of Xu et al.
+          (2026), weighted at its own residual so that it acts mainly as a check</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/kaikoura_2016_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.05 MB)</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/kaikoura_2016/slip.webp"><img src="../../assets/img/slip/kaikoura_2016/slip.webp" alt="Slip on the fault sheets of the 2016 Kaikōura earthquake, and a map of their traces" loading="lazy"></a>
+          <figcaption><strong>Slip.</strong> (A) Slip magnitude on each fault sheet against distance along strike and depth, all at one scale, with each sheet's moment magnitude and peak slip. (B) The sheets' surface traces on a shaded-relief map, coloured as their labels in A; dashed lines are the bottom edges of the dipping sheets, at 25 km; the star marks the USGS epicentre.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/kaikoura_2016/geometry.webp"><img src="../../assets/img/slip/kaikoura_2016/geometry.webp" alt="Three-dimensional view of the fault sheets of the 2016 Kaikōura earthquake, coloured by slip" loading="lazy"></a>
+          <figcaption><strong>Geometry.</strong> The fault sheets in three dimensions, coloured by slip, with the mesh, the surface traces, the coastline and the hypocentre; depth exaggerated ×2.</figcaption>
+        </figure>
+        <details class="slip-more">
+          <summary>The data: interferograms, GNSS and the 3-D displacement field</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/kaikoura_2016/insar.webp"><img src="../../assets/img/slip/kaikoura_2016/insar.webp" alt="Interferograms of the 2016 Kaikōura earthquake, as processed and corrected" loading="lazy"></a>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as processed (Tong, Xu, Sandwell and colleagues) and (B) corrected: the inversion's ramp removed, cubic for ALOS-2 and linear for Sentinel-1. B shows the data the inversion used: ALOS-2 more than 5 km and Sentinel-1 more than 15 km from the faults, where its unwrapping fails across the ruptures. ALOS-2 track T194's sparse points are drawn on a coarser grid. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/kaikoura_2016/gnss_offsets.webp"><img src="../../assets/img/slip/kaikoura_2016/gnss_offsets.webp" alt="GNSS displacements and the 3-D displacement field for the 2016 Kaikōura earthquake" loading="lazy"></a>
+            <figcaption><strong>GNSS and the 3-D displacement field.</strong> (A) GNSS displacements (Nevada Geodetic Laboratory), observed (black) and fitted by our model (red); the longest arrows are shortened and labelled with their length. (B, C) The east and north components of the three-dimensional displacement field of Xu et al. (2026), each map's median removed. The GNSS are fitted by the model; the 3-D field is weighted at its own residual (0.6&ndash;1.3 m), so it acts mainly as a check.</figcaption>
+          </figure>
+        </details>
+        <details class="slip-more">
+          <summary>Fits to the data and uncertainty</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/kaikoura_2016/fits_phase.webp"><img src="../../assets/img/slip/kaikoura_2016/fits_phase.webp" alt="Data, model and residual for the 2016 Kaikōura earthquake: interferograms" loading="lazy"></a>
+            <figcaption><strong>Fits: interferograms.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/kaikoura_2016/fits_3d.webp"><img src="../../assets/img/slip/kaikoura_2016/fits_3d.webp" alt="Data, model and residual for the 2016 Kaikōura earthquake: the 3-D displacement field" loading="lazy"></a>
+            <figcaption><strong>Fits: the 3-D displacement field.</strong> Its east, north and up samples: (A) the data with the inversion's constant removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/kaikoura_2016/uncertainty.webp"><img src="../../assets/img/slip/kaikoura_2016/uncertainty.webp" alt="Uncertainty of slip for the 2016 Kaikōura earthquake" loading="lazy"></a>
+            <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise covariance is fitted to its residuals by restricted maximum likelihood and propagated through the final inversion, linearised about its solution. For the two ALOS-2 tracks and the 3-D field that fit was not stable, and their noise is taken as independent at their residual rms, which leaves out correlated noise: a lower bound there.</figcaption>
+          </figure>
+        </details>
+      </article>
+
       <div class="page-note">
         <p>These models are research products and will change as the data and methods improve. Last updated
         4 November 2026.</p>
         <p>Data: NISAR (NASA/ISRO) through the Alaska Satellite Facility; ALOS-2 (JAXA); Copernicus Sentinel-1 (ESA),
         with interferograms from COMET LiCSAR and offsets from Ou, Lazecký, Watson, Maghsoudi and Wright (2024, CEDA);
-        GNSS from the Nevada Geodetic Laboratory; earthquake parameters from the USGS. Maps: shaded relief from GMT's
+        Copernicus Sentinel-2 (ESA), with offsets for Ridgecrest from Valkaniotis (2019, Zenodo); ALOS-2 and Sentinel-1
+        interferograms for Ridgecrest and Kaikōura from Xu, Tong, Sandwell and colleagues (UC San Diego); the Kaikōura
+        3-D displacement field from Xu et al. (2026, Zenodo); fault traces for Kaikōura from Xu et al. (2018) and for
+        Ridgecrest from Valkaniotis (2019) and Ponti et al. (2020, USGS); GNSS from the Nevada Geodetic Laboratory;
+        earthquake parameters from the USGS. Maps: shaded relief from GMT's
         earth_relief (SRTM15+ and SRTM), coastlines and borders from GSHHG.</p>
       </div>
 
