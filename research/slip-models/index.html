@@ -50,6 +50,7 @@
         <li><a href="#myanmar-2025">2025 Mandalay, Myanmar (Mw 7.7)</a></li>
         <li><a href="#tingri-2025">2025 Dingri, Tibet (Mw 7.1)</a></li>
         <li><a href="#turkiye-2023">2023 Kahramanmaraş doublet, Türkiye (Mw 7.8, 7.7)</a></li>
+        <li><a href="#maduo-2021">2021 Maduo, China (Mw 7.3)</a></li>
         <li><a href="#ridgecrest-2019">2019 Ridgecrest sequence, California (Mw 6.4, 7.1)</a></li>
         <li><a href="#kaikoura-2016">2016 Kaikōura, New Zealand (Mw 7.8)</a></li>
       </ul>
@@ -336,6 +337,63 @@
           <figure class="slip-figure">
             <a href="../../assets/img/slip/turkiye_2023/uncertainty.webp"><img src="../../assets/img/slip/turkiye_2023/uncertainty.webp" alt="Uncertainty of slip for the 2023 Kahramanmaraş earthquake doublet" loading="lazy"></a>
             <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise covariance is fitted to its residuals by restricted maximum likelihood and propagated through the final inversion, linearised about its solution.</figcaption>
+          </figure>
+        </details>
+      </article>
+
+      <article class="project" id="maduo-2021">
+        <h2>2021 Maduo Earthquake, Qinghai, China</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>21 May 2021, 18:04 UTC; Mw 7.3 (USGS)</dd>
+          <dt>Our model</dt>
+          <dd>Mw 7.45: 7.43 on the Kunlun Pass&ndash;Jiangcuo fault and 6.71 on its eastern branch; peak slip 4.7 m, at the surface on
+          the main fault near 99.0°E. In a local crust (CSRM-1.0) the slip moves 0.13 m rms and Mw is 7.43</dd>
+          <dt>Faults</dt>
+          <dd>The Kunlun Pass&ndash;Jiangcuo fault on Hu's (2025) mapped trace, left-lateral, vertical at its western end and dipping
+          75&ndash;85° north along the rest, and a 35 km branch south of its eastern end dipping 80° south. Both to 25 km depth; the
+          dips chosen by cross-validation. The bottom is a modelling choice, made on the aftershocks and the seismic moment because
+          cross-validation cannot read it here: Mw 7.43&ndash;7.47 for bottoms at 20&ndash;30 km</dd>
+          <dt>Data</dt>
+          <dd>Sentinel-1 interferograms on tracks 026, 099 and 172 (ascending) and 033 and 106 (descending) from LiCSAR, and 004
+          (descending) from He et al. (2021); 106 GNSS stations (Wang et al., 2022; Wang et al., 2024). Optical offsets are held out as a test</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/maduo_2021_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.12 MB)</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/maduo_2021/slip.webp"><img src="../../assets/img/slip/maduo_2021/slip.webp" alt="Slip on the two faults of the 2021 Maduo earthquake, and a map of their traces" loading="lazy"></a>
+          <figcaption><strong>Slip.</strong> (A) Slip magnitude on each fault against distance along strike from its western end and depth, both at one scale, with each fault's moment magnitude and peak slip. (B) The faults' surface traces on a shaded-relief map, their bottom edges dashed, with the USGS epicentre.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/maduo_2021/geometry.webp"><img src="../../assets/img/slip/maduo_2021/geometry.webp" alt="Three-dimensional view of the two faults of the 2021 Maduo earthquake, coloured by slip" loading="lazy"></a>
+          <figcaption><strong>Geometry.</strong> The two faults in three dimensions, seen from the south-south-west, coloured by slip, with the mesh, the surface traces and the epicentre; depth exaggerated ×2.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/maduo_2021/offsets_profile.webp"><img src="../../assets/img/slip/maduo_2021/offsets_profile.webp" alt="Published surface offsets along the main fault of the 2021 Maduo earthquake against the model's surface slip and its steps across the fault" loading="lazy"></a>
+          <figcaption><strong>Surface offsets the inversion never saw.</strong> Published left-lateral offsets along the main fault (SPOT, Hayek et al., 2024; SPOT&ndash;Pléiades, Antoine et al., 2026) against the model's surface slip and its fault-parallel step between points ±1 and ±5 km across the fault. The phase data stop 3 km from the fault, so the model's top few kilometres are extrapolated. West of 100 km and east of 165 km the step at ±1 km matches the total offsets to 0.25&ndash;0.4 m rms. Between them it runs about 1 m high, yet agrees at ±5 km: either a shallow slip deficit on that stretch or strain spread wider than the optical windows, not separated. The localized offsets, about a quarter of the total, measure the sharp scarp alone. East of about 158 km the steps also span the eastern branch until it lies outside each window, hence the jumps near 160 and 176 km.</figcaption>
+        </figure>
+        <details class="slip-more">
+          <summary>The data: interferograms and GNSS</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/maduo_2021/insar.webp"><img src="../../assets/img/slip/maduo_2021/insar.webp" alt="Interferograms of the 2021 Maduo earthquake, as processed and corrected" loading="lazy"></a>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as processed (LiCSAR; He et al., 2021, for track 004) and (B) corrected: the inversion's linear ramp removed from each frame of the whole product. LiCSAR unwraps each frame on its own, so the inversion gives each frame its own ramp, and the seams between frames show. The inversion masked pixels of low coherence and pixels where LiCSAR's and He et al.'s unwrapping disagree, and sampled more than 3 km (track 004: 5 km) from the faults, within 95.6&ndash;101.2°E, 33&ndash;36.4°N. The flat bands on track 106 are LiCSAR's fill in pixels of zero coherence. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change (2.8 cm).</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/maduo_2021/gnss_offsets.webp"><img src="../../assets/img/slip/maduo_2021/gnss_offsets.webp" alt="GNSS displacements for the 2021 Maduo earthquake, the whole network and the near field" loading="lazy"></a>
+            <figcaption><strong>GNSS.</strong> (A) The network, observed (black) and fitted by our model (red); the stations in the dashed box are drawn in (B) at their own scale, the longest arrows shortened and labelled with their length. With the GNSS left out of the inversion, the stations beyond 100 km read about 9% more than the model predicts, where a synthetic test on the same crust reads about 3%. That excess is 1&ndash;3 standard deviations, depending on the smoothing. A softer lower crust, a softer mantle or deeper slip could each account for it, and these cannot be told apart; a softer mid-crust pushes the other way and is disfavoured. The excess leans north, where the regional tomography (CSRM-1.0) has a faster crust; that has not been tested in 3-D.</figcaption>
+          </figure>
+        </details>
+        <details class="slip-more">
+          <summary>Fits to the data and uncertainty</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/maduo_2021/fits_phase.webp"><img src="../../assets/img/slip/maduo_2021/fits_phase.webp" alt="Data, model and residual for the 2021 Maduo earthquake: interferograms" loading="lazy"></a>
+            <figcaption><strong>Fits: interferograms.</strong> Each track's samples, its frames together: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms. On the tracks along the rupture the samples fit to 20&ndash;30 mm within 10 km of the faults, and to about 5&ndash;14 mm beyond 20 km.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/maduo_2021/uncertainty.webp"><img src="../../assets/img/slip/maduo_2021/uncertainty.webp" alt="Uncertainty of slip for the 2021 Maduo earthquake" loading="lazy"></a>
+            <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each series' noise is taken as measured on its residual beyond 10 km of the faults (rms 5&ndash;14 mm, correlated over 14&ndash;45 km) and propagated through the final inversion, linearised about its solution. The restricted-maximum-likelihood fit used for other events on this page was degenerate on 11 of the 12 series here.</figcaption>
           </figure>
         </details>
       </article>
