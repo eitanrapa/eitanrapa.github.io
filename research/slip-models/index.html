@@ -48,6 +48,7 @@
         <li><a href="#panama-2026">2026 Azuero&ndash;Soná, Panama (Mw 7.7)</a></li>
         <li><a href="#venezuela-2026">2026 San Sebastián, Venezuela (Mw 7.6)</a></li>
         <li><a href="#myanmar-2025">2025 Mandalay, Myanmar (Mw 7.7)</a></li>
+        <li><a href="#tingri-2025">2025 Dingri, Tibet (Mw 7.1)</a></li>
         <li><a href="#turkiye-2023">2023 Kahramanmaraş doublet, Türkiye (Mw 7.8, 7.7)</a></li>
         <li><a href="#ridgecrest-2019">2019 Ridgecrest sequence, California (Mw 6.4, 7.1)</a></li>
         <li><a href="#kaikoura-2016">2016 Kaikōura, New Zealand (Mw 7.8)</a></li>
@@ -112,7 +113,7 @@
           <dd>24 June 2026; one rupture in two stages, which USGS lists as Mww 7.2 and Mww 7.5, 33 seconds apart
           (Mw 7.6 combined)</dd>
           <dt>Our model</dt>
-          <dd>Mw 7.60 for the whole rupture (every image spans both stages); peak slip 3.4 m</dd>
+          <dd>Mw 7.60 for the whole rupture (every image spans both stages), with the harmonic mean of the two sides' rigidities above 25 km (7.66 with the south block's alone); peak slip 3.4 m</dd>
           <dt>Fault</dt>
           <dd>The San Sebastián fault, right-lateral strike-slip, about 260 km long, vertical, to 35 km depth, with a
           softer north block above 25 km (rigidity ratio 1.6)</dd>
@@ -161,7 +162,7 @@
           <dt>Date</dt>
           <dd>28 March 2025, 06:20 UTC; Mw 7.7</dd>
           <dt>Our model</dt>
-          <dd>Mw 7.90 with the east block's rigidity (7.88 with the two sides' mean above 10 km); peak slip 5.6 m, near
+          <dd>Mw 7.88, with the harmonic mean of the two sides' rigidities above 10 km (7.90 with the east block's alone); peak slip 5.6 m, near
           Mandalay and the epicentre</dd>
           <dt>Fault</dt>
           <dd>The Sagaing fault over 504 km, vertical in the south and dipping east to 60° in the north, to 30 km depth;
@@ -186,11 +187,15 @@
           <summary>The data: interferograms and pixel offsets</summary>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/myanmar_2025/insar.webp"><img src="../../assets/img/slip/myanmar_2025/insar.webp" alt="Interferograms of the 2025 Mandalay earthquake, as processed and corrected" loading="lazy"></a>
-            <figcaption><strong>Interferograms.</strong> Each ALOS-2 track (A) as processed (Xu et al., 2025) and (B) corrected: the inversion's ramp removed. B shows the data the inversion used: coherence at least 0.3, more than 5 km from the trace. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change (12.1 cm).</figcaption>
+            <figcaption><strong>Interferograms.</strong> Each ALOS-2 track (A) as processed (Xu et al., 2025) and (B) corrected: the inversion's ramp removed from the whole product. The inversion itself sampled coherence at least 0.3, more than 5 km from the trace. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change (12.1 cm).</figcaption>
           </figure>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/myanmar_2025/gnss_offsets.webp"><img src="../../assets/img/slip/myanmar_2025/gnss_offsets.webp" alt="Pixel offsets for the 2025 Mandalay earthquake" loading="lazy"></a>
             <figcaption><strong>Pixel offsets.</strong> (A) Range and (B) azimuth offsets on each Sentinel-1 and LuTan-1 track (Xu et al., 2025), each map's median removed, without the pixels whose own uncertainty exceeds twice the median. On this north&ndash;south fault the azimuth offsets record the fault-parallel motion directly. All are fitted by the model; no GNSS was used.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/myanmar_2025/offsets_corrected.webp"><img src="../../assets/img/slip/myanmar_2025/offsets_corrected.webp" alt="Offsets of the 2025 Mandalay, Myanmar earthquake, as processed and with the inversion's planes removed" loading="lazy"></a>
+            <figcaption><strong>Corrected offsets.</strong> Each Sentinel-1 series (A) as processed, its median removed, and (B) with the plane the inversion fitted to it removed, on one colour scale per series. LuTan-1's series were fixed with a constant, not a plane, and are not shown.</figcaption>
           </figure>
         </details>
         <details class="slip-more">
@@ -210,6 +215,68 @@
           <figure class="slip-figure">
             <a href="../../assets/img/slip/myanmar_2025/uncertainty.webp"><img src="../../assets/img/slip/myanmar_2025/uncertainty.webp" alt="Uncertainty of slip for the 2025 Mandalay earthquake" loading="lazy"></a>
             <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise covariance is fitted to its residuals by restricted maximum likelihood and propagated through the final inversion, linearised about its solution.</figcaption>
+          </figure>
+        </details>
+      </article>
+
+      <article class="project" id="tingri-2025">
+        <h2>2025 Dingri (Tingri) Earthquake, Tibet</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>7 January 2025, 01:05 UTC; Mw 7.1 (USGS)</dd>
+          <dt>Our model</dt>
+          <dd>Mw 7.06: 7.05 on the Dengmocuo fault and 5.88 on the western graben fault; peak slip 3.0 m, at the surface on
+          the Dengmocuo fault near 28.75°N</dd>
+          <dt>Faults</dt>
+          <dd>The west-dipping Dengmocuo fault, normal with a left-lateral part, on the trace its near-field step follows (the
+          USGS-mapped breaks, continued along the interferograms and offsets), dipping 50° at the surface and flattening toward
+          35° at 25 km; and an antithetic fault on the graben's west side, dipping 45° east with normal slip only and ending on
+          the main fault. Both to 20 km depth; the dips chosen by cross-validation. The bottom is a modelling choice: Mw about
+          7.02&ndash;7.09 for bottoms at 15&ndash;30 km</dd>
+          <dt>Data</dt>
+          <dd>Sentinel-1 interferograms on tracks 012 (ascending) and 121 (descending), ALOS-2 path 47's interferogram and
+          azimuth offsets (He, Feng and Yun, 2025), and 12 GNSS stations (Li et al., 2025)</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/tingri_2025_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.03 MB)</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/tingri_2025/slip.webp"><img src="../../assets/img/slip/tingri_2025/slip.webp" alt="Slip on the two faults of the 2025 Dingri, Tibet earthquake, and a map of their traces" loading="lazy"></a>
+          <figcaption><strong>Slip.</strong> (A) Slip magnitude on each fault against distance along strike from its southern end and depth, both at one scale, with each fault's moment magnitude and peak slip. (B) The faults' surface traces on a shaded-relief map, the Dengmocuo fault's bottom edge dashed, with the USGS epicentre.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/tingri_2025/geometry.webp"><img src="../../assets/img/slip/tingri_2025/geometry.webp" alt="Three-dimensional view of the two faults of the 2025 Dingri, Tibet earthquake, coloured by slip" loading="lazy"></a>
+          <figcaption><strong>Geometry.</strong> The two faults in three dimensions, seen from the west-south-west, coloured by slip, with the mesh, the surface traces and the epicentre; depth exaggerated ×1.5.</figcaption>
+        </figure>
+        <details class="slip-more">
+          <summary>The data: interferograms, GNSS and azimuth offsets</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/tingri_2025/insar.webp"><img src="../../assets/img/slip/tingri_2025/insar.webp" alt="Interferograms of the 2025 Dingri, Tibet earthquake, as processed and corrected" loading="lazy"></a>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as processed (He, Feng and Yun, 2025) and (B) corrected: the inversion's ramp removed from the whole product, linear for Sentinel-1 and cubic for ALOS-2, whose small footprint is drawn closer. The inversion itself sampled ALOS-2 more than 2 km and Sentinel-1 more than 3 km from the faults. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change. ALOS-2's cubic is poorly held at the corners of its small frame. Against Sentinel-1 track 121, which looks along nearly the same line, it rightly removes a bump of 10&ndash;20 cm west of the faults (about one cycle) but runs up to 45 cm too far at the north-west corner, so that panel shows too many fringes there. Tying the ramp to Sentinel-1 leaves the slip essentially unchanged (Mw within 0.003, 0.03 m rms).</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/tingri_2025/gnss_offsets.webp"><img src="../../assets/img/slip/tingri_2025/gnss_offsets.webp" alt="GNSS displacements and ALOS-2 offsets for the 2025 Dingri, Tibet earthquake" loading="lazy"></a>
+            <figcaption><strong>GNSS and pixel offsets.</strong> (A) GNSS displacements (Li et al., 2025), observed (black) and fitted by our model (red); the longest arrows are shortened and labelled with their length. The model is about 25&ndash;30% short of the east&ndash;west extension at 10&ndash;40 km from the faults, in the GNSS and in Sentinel-1 alike. (B, C) ALOS-2 path 47's range and azimuth offsets (He, Feng and Yun, 2025), each map's median removed. The azimuth offsets are fitted. The range offsets are not: they measure the line of sight the interferogram already covers, and differ from it by about 0.1 m over the graben, where Sentinel-1's range offsets differ by about as much the other way.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/tingri_2025/offsets_corrected.webp"><img src="../../assets/img/slip/tingri_2025/offsets_corrected.webp" alt="ALOS-2 azimuth offsets of the 2025 Dingri, Tibet earthquake, as processed and with the inversion's plane removed" loading="lazy"></a>
+            <figcaption><strong>Corrected offsets.</strong> The ALOS-2 azimuth offsets (A) as processed, the median removed, and (B) with the plane the inversion fitted removed, on one colour scale.</figcaption>
+          </figure>
+        </details>
+        <details class="slip-more">
+          <summary>Fits to the data and uncertainty</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/tingri_2025/fits_phase.webp"><img src="../../assets/img/slip/tingri_2025/fits_phase.webp" alt="Data, model and residual for the 2025 Dingri, Tibet earthquake: interferograms" loading="lazy"></a>
+            <figcaption><strong>Fits: interferograms.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/tingri_2025/fits_azimuth.webp"><img src="../../assets/img/slip/tingri_2025/fits_azimuth.webp" alt="Data, model and residual for the 2025 Dingri, Tibet earthquake: azimuth offsets" loading="lazy"></a>
+            <figcaption><strong>Fits: azimuth offsets.</strong> The ALOS-2 samples: (A) the data with the inversion's plane removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/tingri_2025/uncertainty.webp"><img src="../../assets/img/slip/tingri_2025/uncertainty.webp" alt="Uncertainty of slip for the 2025 Dingri, Tibet earthquake" loading="lazy"></a>
+            <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise covariance is fitted to its residuals by restricted maximum likelihood and propagated through the final inversion, linearised about its solution. For ALOS-2's interferogram and azimuth offsets that fit was not stable, and their noise is taken as independent at their residual rms, which leaves out correlated noise: a lower bound there.</figcaption>
           </figure>
         </details>
       </article>
@@ -245,7 +312,7 @@
           <summary>The data: interferograms, GNSS and pixel offsets</summary>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/turkiye_2023/insar.webp"><img src="../../assets/img/slip/turkiye_2023/insar.webp" alt="Interferograms of the 2023 Kahramanmaraş earthquake doublet, as processed and corrected" loading="lazy"></a>
-            <figcaption><strong>Interferograms.</strong> Each track (A) as processed and (B) corrected: the inversion's ramp removed. B shows the data the inversion used: the coherent far field (coherence at least 0.25), more than 15 km from the faults, where LiCSAR's unwrapping fails across the ruptures; the pixel offsets cover the near field. Track 094D's two frames share a row; each entered the inversion as its own track. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as processed and (B) corrected: the inversion's ramp removed from the whole product. The inversion itself sampled the coherent far field (coherence at least 0.25), more than 15 km from the faults, where LiCSAR's unwrapping fails across the ruptures; the pixel offsets cover the near field. Track 094D's two frames share a row; each entered the inversion as its own track. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
           </figure>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/turkiye_2023/gnss_offsets.webp"><img src="../../assets/img/slip/turkiye_2023/gnss_offsets.webp" alt="GNSS displacements and pixel offsets for the 2023 Kahramanmaraş earthquake doublet" loading="lazy"></a>
@@ -306,11 +373,15 @@
           <summary>The data: interferograms, GNSS and optical offsets</summary>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/ridgecrest_2019/insar.webp"><img src="../../assets/img/slip/ridgecrest_2019/insar.webp" alt="Interferograms of the 2019 Ridgecrest earthquake sequence, as processed and corrected" loading="lazy"></a>
-            <figcaption><strong>Interferograms.</strong> Each track (A) as processed (Xu, Sandwell and colleagues) and (B) corrected: the inversion's ramp removed, cubic for ALOS-2 and linear for Sentinel-1. B shows the data the inversion used: more than 2 km from the faults. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as processed (Xu, Sandwell and colleagues) and (B) corrected: the inversion's ramp removed from the whole product, cubic for ALOS-2 and linear for Sentinel-1. The inversion itself sampled more than 2 km from the faults. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
           </figure>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/ridgecrest_2019/gnss_offsets.webp"><img src="../../assets/img/slip/ridgecrest_2019/gnss_offsets.webp" alt="GNSS displacements and optical offsets for the 2019 Ridgecrest earthquake sequence" loading="lazy"></a>
             <figcaption><strong>GNSS and optical offsets.</strong> (A) GNSS displacements (Nevada Geodetic Laboratory), observed (black) and fitted by our model (red); the longest arrows are shortened and labelled with their length. (B, C) The east and north Sentinel-2 offsets (Valkaniotis, 2019; COSI-Corr, detrended by the author), each map's median removed. Both are fitted by the model.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/ridgecrest_2019/offsets_corrected.webp"><img src="../../assets/img/slip/ridgecrest_2019/offsets_corrected.webp" alt="Optical offsets of the 2019 Ridgecrest earthquake sequence, as processed and with the inversion's planes removed" loading="lazy"></a>
+            <figcaption><strong>Corrected offsets.</strong> The Sentinel-2 east and north offsets (A) as processed, each map's median removed, and (B) with the plane the inversion fitted to each removed, on one colour scale per row. These maps were detrended by their author, so the plane the inversion fits mostly puts a trend back, as the larger far-field values in B show.</figcaption>
           </figure>
         </details>
         <details class="slip-more">
@@ -363,7 +434,7 @@
           <summary>The data: interferograms, GNSS and the 3-D displacement field</summary>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/kaikoura_2016/insar.webp"><img src="../../assets/img/slip/kaikoura_2016/insar.webp" alt="Interferograms of the 2016 Kaikōura earthquake, as processed and corrected" loading="lazy"></a>
-            <figcaption><strong>Interferograms.</strong> Each track (A) as processed (Tong, Xu, Sandwell and colleagues) and (B) corrected: the inversion's ramp removed, cubic for ALOS-2 and linear for Sentinel-1. B shows the data the inversion used: ALOS-2 more than 5 km and Sentinel-1 more than 15 km from the faults, where its unwrapping fails across the ruptures. ALOS-2 track T194's sparse points are drawn on a coarser grid. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as processed (Tong, Xu, Sandwell and colleagues) and (B) corrected: the inversion's ramp removed from the whole product, cubic for ALOS-2 and linear for Sentinel-1. The inversion itself sampled ALOS-2 more than 5 km and Sentinel-1 more than 15 km from the faults, where its unwrapping fails across the ruptures. T102's cubic rests on only 64 samples and is poorly held: beyond 15 km of the faults this track agrees with Sentinel-1, which looks along nearly the same line, to 38 mm as delivered but to 232 mm corrected, so its panel B overstates the ramp. ALOS-2 track T194's sparse points are drawn on a coarser grid. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change.</figcaption>
           </figure>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/kaikoura_2016/gnss_offsets.webp"><img src="../../assets/img/slip/kaikoura_2016/gnss_offsets.webp" alt="GNSS displacements and the 3-D displacement field for the 2016 Kaikōura earthquake" loading="lazy"></a>
