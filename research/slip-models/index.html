@@ -50,6 +50,7 @@
         <li><a href="#venezuela-2026">2026 San Sebastián, Venezuela (Mw 7.6)</a></li>
         <li><a href="#myanmar-2025">2025 Mandalay, Myanmar (Mw 7.7)</a></li>
         <li><a href="#tingri-2025">2025 Dingri, Tibet (Mw 7.1)</a></li>
+        <li><a href="#noto-2024">2024 Noto Peninsula, Japan (Mw 7.5)</a></li>
         <li><a href="#turkiye-2023">2023 Kahramanmaraş doublet, Türkiye (Mw 7.8, 7.7)</a></li>
         <li><a href="#maduo-2021">2021 Maduo, China (Mw 7.3)</a></li>
         <li><a href="#ridgecrest-2019">2019 Ridgecrest sequence, California (Mw 6.4, 7.1)</a></li>
@@ -335,6 +336,66 @@
         </details>
       </article>
 
+      <article class="project" id="noto-2024">
+        <h2>2024 Noto Peninsula Earthquake, Japan</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>1 January 2024, 07:10 UTC; Mw 7.5 (USGS)</dd>
+          <dt>Our model</dt>
+          <dd>Mw 7.59, peak slip 7.7 m at the surface off the peninsula's north-western corner, with 5.7 m near 137.1° E and 4&ndash;5 m offshore to the north-east; reverse with a right-lateral part (rake 117°, against 102.5° in USGS's W-phase solution). Its moment is 1.35 times USGS's, partly from the layered crust's rigidity (mean 35 GPa; Mw 7.55 at a uniform 30 GPa). The swarm before the earthquake does not appear to explain the excess: two of the three pairs span months of it, and leaving both out raises Mw, to 7.62. Of the potency, 74% is above 10 km. All the data lie on the peninsula, on the hanging-wall side, but planted tests show they need the shallow and offshore slip: with no slip above 5 km in the truth, the inversion recovers 37% of the potency the real data give there, and with none north-east of the peninsula's tip, 12%. The split between 0&ndash;5 and 5&ndash;10 km is good to about 20%</dd>
+          <dt>Fault</dt>
+          <dd>A single fault along the north coast, on Enomoto and Kaneko's (2025) offshore segments stitched into a 136 km line and continued 5 km past each end, dipping south-east at 50° at the surface and shallowing to 30° at 20 km. We found no public file of the offshore trace. Cross-validation prefers this line to the straighter one of Guo et al. (2025), with a held-out misfit of 1.76 against 2.41, and asks for no extension past either end. One dip along strike does as well as any per-segment mix; a plain 45° is within 2%, and the two north-eastern segments, offshore of the data, do not constrain the dip. The bottom is at 20 km: cross-validation has a minimum at 18&ndash;20 km, and synthetic tests with true bottoms at 18 and 24 km both read 20, so it could lie from about 16 to 24 km (Mw 7.59&ndash;7.61); at 30 km Mw is 7.67. The separate western and eastern faults of Guo et al. (2025) have not been tested</dd>
+          <dt>Data</dt>
+          <dd>ALOS-2 range offsets on tracks 121 and 127 (ascending) and 026 (descending), from Xu et al. (2024); ALOS-2 interferograms of the same pairs, from Guo et al. (2025), only beyond 15 km of the line (25 km on track 026), because nearer in they read below the offsets by a cycle or more; and 365 GNSS stations (Nevada Geodetic Laboratory) over days 1&ndash;5. Stations near the fault differ from the offsets around them by 10&ndash;30% of their motion, so each station's sigma is at least 10% of its motion. ALOS-2 azimuth offsets were tested and left out: one track carries a 2 m step that no ground motion makes. So was Sentinel-1, whose coherence on the peninsula is about 0.1</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/noto_2024_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.05 MB)</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/noto_2024/slip.webp"><img src="../../assets/img/slip/noto_2024/slip.webp" alt="Slip on the fault along the north coast of the Noto peninsula in the 2024 earthquake, and a map of its trace" loading="lazy"></a>
+          <figcaption><strong>Slip.</strong> (A) Slip magnitude against distance along strike from the south-western end and depth, with the moment magnitude and peak slip. The mapped line runs from 5 to 141 km; the model continues 5 km past each end so that the zero slip at its ends can taper. The patch at 5&ndash;15 km, 2.9 m and 3% of the potency, slips in a different sense from the rest, left-lateral with a normal part, and the data do not require it: with no slip there in the truth, the inversion still recovers about 70% of its potency. (B) The fault's surface trace on a shaded-relief map, its bottom edge dashed, with the USGS epicentre.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/noto_2024/geometry.webp"><img src="../../assets/img/slip/noto_2024/geometry.webp" alt="Three-dimensional view of the fault in the 2024 Noto earthquake, coloured by slip" loading="lazy"></a>
+          <figcaption><strong>Geometry.</strong> The fault in three dimensions, seen from the south-east, coloured by slip, with the mesh, the surface trace, the coast and the epicentre; depth exaggerated ×1.5.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/noto_2024/heldout_field.webp"><img src="../../assets/img/slip/noto_2024/heldout_field.webp" alt="Ma et al.'s three-dimensional displacement field for the 2024 Noto earthquake against the model" loading="lazy"></a>
+          <figcaption><strong>Against a 3-D field.</strong> (A) Ma et al.'s (2024) east, north and up displacements, (B) the model at the same points and (C) the difference, after a plane on each component. This is not an independent test, since that field is built from ALOS-2 offsets too. Its east is 1.13 times the model's and its up 1.09 times, about what the 1.08 between that field and the range offsets predicts. Up differs by 219 mm rms of 793 mm at 2&ndash;5 km from the line, and east by 134 mm of 320 mm at 5&ndash;10 km. North is not fitted, 323 mm of 354 mm at 2&ndash;5 km: among the radar data only azimuth offsets see it, and we left those out.</figcaption>
+        </figure>
+        <details class="slip-more">
+          <summary>The data: interferograms, GNSS and range offsets</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/noto_2024/insar.webp"><img src="../../assets/img/slip/noto_2024/insar.webp" alt="ALOS-2 interferograms of the 2024 Noto earthquake, as released and corrected" loading="lazy"></a>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as released by Guo et al. (2025) and (B) with the inversion's cubic ramp removed from the whole product. The inversion sampled them only beyond 15 km of the line (25 km on track 026), and the ramp is extrapolated over the rest. Track 121's pair spans 15 months, from September 2022, including the M6.2 of May 2023; track 026's spans seven months and track 127's four weeks. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change (12.1 cm).</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/noto_2024/gnss_offsets.webp"><img src="../../assets/img/slip/noto_2024/gnss_offsets.webp" alt="GNSS displacements for the 2024 Noto earthquake, the whole network and the near field" loading="lazy"></a>
+            <figcaption><strong>GNSS.</strong> (A) The network, observed (black) and fitted by our model (red); the stations in the dashed box are drawn in (B) at their own scale, and the longest arrow in (A) is shortened and labelled with its length. Each offset is days 1&ndash;5 after the event minus the 10 days before. With the GNSS left out of the inversion, the rest predict them at a scale of 0.77&ndash;0.83 within 30 km of the fault and 1.3&ndash;1.4 beyond; synthetic tests read 1.5 beyond 100 km, so that rise is not by itself a measurement. Four stations misfit most: J575 by 0.53 m in east, J576 by 0.45 m in north and 0.31 m in up, G158 by 0.10 m in up, and J054, near Uchinada, where the coast was reported to liquefy, which moved 47 mm west against the model's 14 mm. Without all four, the slip moves by 0.10 m rms and Mw by 0.002.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/noto_2024/offsets_corrected.webp"><img src="../../assets/img/slip/noto_2024/offsets_corrected.webp" alt="ALOS-2 range offsets of the 2024 Noto earthquake, as released and with the inversion's planes removed" loading="lazy"></a>
+            <figcaption><strong>Range offsets.</strong> Each track's offsets from Xu et al. (2024), (A) less their median and (B) less the plane the inversion fitted, on the same colour scale. The inversion sampled them within 40 km of the line, so the planes are extrapolated further south, as in the south-eastern corner of track 121.</figcaption>
+          </figure>
+        </details>
+        <details class="slip-more">
+          <summary>Fits to the data and uncertainty</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/noto_2024/fits_phase.webp"><img src="../../assets/img/slip/noto_2024/fits_phase.webp" alt="Data, model and residual for the 2024 Noto earthquake: interferograms" loading="lazy"></a>
+            <figcaption><strong>Fits: interferograms.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms. Sampled only far from the fault, they constrain the far field more than the slip itself: leaving each out moves the slip by 0.04&ndash;0.24 m rms, and the rest predict it to 6&ndash;14 mm.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/noto_2024/fits_range.webp"><img src="../../assets/img/slip/noto_2024/fits_range.webp" alt="Data, model and residual for the 2024 Noto earthquake: range offsets" loading="lazy"></a>
+            <figcaption><strong>Fits: range offsets.</strong> The same for the range offsets. On the full data the residual is 186&ndash;290 mm at 2&ndash;3 km from the line, against 660&ndash;730 mm of signal, and 82&ndash;140 mm at 20&ndash;40 km, against 140&ndash;180 mm. Leaving one track's offsets out moves the slip by 0.09&ndash;0.53 m rms and Mw by at most 0.006.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/noto_2024/uncertainty.webp"><img src="../../assets/img/slip/noto_2024/uncertainty.webp" alt="Uncertainty of slip for the 2024 Noto earthquake" loading="lazy"></a>
+            <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each series' noise is taken as measured on its residual beyond 10 km of the line (interferograms 7&ndash;15 mm, range offsets 52&ndash;111 mm, correlated over 1.5&ndash;4.5 km) and each GNSS component at its own sigma, propagated through the final inversion, linearised about its solution. A Monte Carlo of 100 draws through the bounded solve gives the same spread (median ratio 1.01) and ±0.005 in Mw. It does not include the choices of line, dip and bottom, and the residuals near the fault are larger than this noise.</figcaption>
+          </figure>
+        </details>
+      </article>
+
       <article class="project" id="turkiye-2023">
         <h2>2023 Kahramanmaraş Earthquake Doublet, Türkiye</h2>
         <hr>
@@ -576,7 +637,8 @@
         with interferograms from COMET LiCSAR and offsets from Ou, Lazecký, Watson, Maghsoudi and Wright (2024, CEDA);
         Copernicus Sentinel-2 (ESA), with offsets for Ridgecrest from Valkaniotis (2019, Zenodo); ALOS-2 and Sentinel-1
         interferograms for Ridgecrest and Kaikōura from Xu, Tong, Sandwell and colleagues (UC San Diego); the Kaikōura
-        3-D displacement field from Xu et al. (2026, Zenodo); the Kumamoto 3-D displacement field (doi:10.57499/GSI_SAR_2026_001) and fault trace from the Geospatial Information Authority of Japan; fault traces for Kaikōura from Xu et al. (2018) and for
+        3-D displacement field from Xu et al. (2026, Zenodo); the Kumamoto 3-D displacement field (doi:10.57499/GSI_SAR_2026_001) and fault trace from the Geospatial Information Authority of Japan;
+        for Noto, ALOS-2 offsets from Xu et al. (2024, Zenodo), interferograms from Guo et al. (2025, Zenodo), the 3-D displacement field from Ma et al. (2024, Zenodo) and offshore fault segments from Enomoto and Kaneko (2025, Zenodo); fault traces for Kaikōura from Xu et al. (2018) and for
         Ridgecrest from Valkaniotis (2019) and Ponti et al. (2020, USGS); GNSS from the Nevada Geodetic Laboratory;
         earthquake parameters from the USGS. Maps: shaded relief from GMT's
         earth_relief (SRTM15+ and SRTM), coastlines and borders from GSHHG.</p>
