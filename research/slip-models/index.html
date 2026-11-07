@@ -46,6 +46,7 @@
 
       <ul class="event-index" aria-label="Earthquakes on this page">
         <li><a href="#panama-2026">2026 Azuero&ndash;Soná, Panama (Mw 7.7)</a></li>
+        <li><a href="#kumamoto-2026">2026 Kumamoto, Japan (Mw 6.8)</a></li>
         <li><a href="#venezuela-2026">2026 San Sebastián, Venezuela (Mw 7.6)</a></li>
         <li><a href="#myanmar-2025">2025 Mandalay, Myanmar (Mw 7.7)</a></li>
         <li><a href="#tingri-2025">2025 Dingri, Tibet (Mw 7.1)</a></li>
@@ -102,6 +103,58 @@
           <figure class="slip-figure">
             <a href="../../assets/img/slip/panama_2026/uncertainty.webp"><img src="../../assets/img/slip/panama_2026/uncertainty.webp" alt="Uncertainty of slip for the 2026 Azuero&ndash;Soná, Panama earthquake" loading="lazy"></a>
             <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise covariance is fitted to its residuals by restricted maximum likelihood and propagated through the final inversion, linearised about its solution.</figcaption>
+          </figure>
+        </details>
+      </article>
+
+      <article class="project" id="kumamoto-2026">
+        <h2>2026 Kumamoto Earthquake, Japan</h2>
+        <hr>
+        <dl class="facts">
+          <dt>Date</dt>
+          <dd>28 July 2026, 07:27 UTC; Mw 6.8 (USGS)</dd>
+          <dt>Our model</dt>
+          <dd>Mw 6.84, peak slip 2.8 m at 5 km depth; right-lateral, with normal slip along the south-western two-thirds (rake &minus;168°). It covers the earthquake and about three weeks after it, since the interferograms end 16&ndash;24 days later. Its moment is 1.34 times USGS's. GNSS grew by only 1&ndash;14% between days 1&ndash;5 and days 16&ndash;24, which does not account for that, though afterslip in the first days cannot be separated from the earthquake</dd>
+          <dt>Fault</dt>
+          <dd>The Hinagu fault zone on the mapped surface displacement boundary of the Geospatial Information Authority of Japan (GSI), dipping north-west: 70° at the surface shallowing to 50° at 20 km along its south-western half, and steeper to the north-east. The dips were chosen by cross-validation, which halves the held-out misfit against a vertical fault and prefers about 65° to USGS's 75°. Cross-validation asks for no extension past the mapped ends, under the Yatsushiro Sea, though about 1 m of slip at depth reaches the south-western end, so the rupture may not stop exactly there. The bottom at 20 km is a modelling choice because cross-validation is flat from 14 to 40 km: Mw 6.82&ndash;6.92 for bottoms at 14&ndash;28 km, 6.98 at 40 km</dd>
+          <dt>Data</dt>
+          <dd>NISAR on tracks 024 and 125 (ascending) and 003 and 104 (descending), processed from the radar images with our ionospheric correction, and 131 GNSS stations (Nevada Geodetic Laboratory) over days 16&ndash;24 to match the pairs. GSI's 3-D displacement field (GSI, 2026) is held out as a test. NISAR's azimuth offsets were tested and left out: they carry streaks of up to 0.75 m that run past the rupture's ends, and they improved nothing</dd>
+          <dt>Download</dt>
+          <dd><a href="../../assets/data/slip/kumamoto_2026_slip_model.zip">The slip model</a>: the nodes and triangles of its
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.03 MB)</dd>
+        </dl>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/kumamoto_2026/slip.webp"><img src="../../assets/img/slip/kumamoto_2026/slip.webp" alt="Slip on the Hinagu fault zone in the 2026 Kumamoto earthquake, and a map of its trace" loading="lazy"></a>
+          <figcaption><strong>Slip.</strong> (A) Slip magnitude against distance along strike from the south-western end and depth, with the moment magnitude and peak slip. The mapped line runs from 5 to 41 km; the model continues 5 km past each end so that the zero slip at its ends can taper. (B) The fault's surface trace on a shaded-relief map, its bottom edge dashed, with the USGS epicentre.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/kumamoto_2026/geometry.webp"><img src="../../assets/img/slip/kumamoto_2026/geometry.webp" alt="Three-dimensional view of the Hinagu fault zone in the 2026 Kumamoto earthquake, coloured by slip" loading="lazy"></a>
+          <figcaption><strong>Geometry.</strong> The fault in three dimensions, seen from the south-east, coloured by slip, with the mesh, the surface trace and the epicentre; depth exaggerated ×1.5.</figcaption>
+        </figure>
+        <figure class="slip-figure">
+          <a href="../../assets/img/slip/kumamoto_2026/heldout_field.webp"><img src="../../assets/img/slip/kumamoto_2026/heldout_field.webp" alt="GSI's three-dimensional displacement field for the 2026 Kumamoto earthquake against the model, which never saw it" loading="lazy"></a>
+          <figcaption><strong>A 3-D field the inversion never saw.</strong> (A) GSI's east, north and up displacements from nine ALOS-2 and ALOS-4 pairs, (B) the model at the same points and (C) the difference, after a plane on each component. The model recovers the vertical at a scale of 1.00, to 17 mm rms of 138 mm at 2&ndash;5 km from the fault; a vertical fault left 77 mm there. East is 0.97, to 34 mm of 256 mm. North is 0.89, to 73 mm of 338 mm, but GSI's north itself differs from the GNSS by 50&ndash;130 mm at many stations nearby, in bands like those in NISAR's azimuth offsets, so most of that difference is probably GSI's.</figcaption>
+        </figure>
+        <details class="slip-more">
+          <summary>The data: interferograms and GNSS</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/kumamoto_2026/insar.webp"><img src="../../assets/img/slip/kumamoto_2026/insar.webp" alt="NISAR interferograms of the 2026 Kumamoto earthquake, as processed, the ionospheric screen, and corrected" loading="lazy"></a>
+            <figcaption><strong>Interferograms.</strong> Each track (A) as processed, (B) our split-spectrum ionospheric screen, estimated from the two NISAR sub-bands, and (C) corrected: the screen and the inversion's cubic ramp removed from the whole product. The inversion sampled more than 2 km from the trace and gave each island its own offset. It left out two parts of track 104: Shimoshima, crossed by a thin band of low coherence with a phase jump of about a cycle, which ASF's own product also shows, and the tip of its swath north-west of the rupture, where the unwrapping loses a cycle in low coherence. Track 003 is a 48-day pair (26 June to 13 August), because its 8 July image is a bad product, about 52 km along track from where its timing puts it. Wrapped phase: one cycle of colour is half the radar wavelength of line-of-sight change (12.1 cm).</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/kumamoto_2026/gnss_offsets.webp"><img src="../../assets/img/slip/kumamoto_2026/gnss_offsets.webp" alt="GNSS displacements for the 2026 Kumamoto earthquake, the whole network and the near field" loading="lazy"></a>
+            <figcaption><strong>GNSS.</strong> (A) The network, observed (black) and fitted by our model (red); the stations in the dashed box are drawn in (B) at their own scale, the longest arrow shortened and labelled with its length. Each offset is days 16&ndash;24 after the event minus the 10 days before. With the GNSS left out of the inversion, the rest predict them at a scale of 0.98 within 15 km of the fault, rising to 1.9 beyond 100 km on about 5 mm of signal; synthetic tests read 1.4&ndash;2.1 there, so that rise is not by itself a measurement. Station J468, south of the fault's end and near aftershocks of M5.3&ndash;5.6, moves 42 mm further south than the model.</figcaption>
+          </figure>
+        </details>
+        <details class="slip-more">
+          <summary>Fits to the data and uncertainty</summary>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/kumamoto_2026/fits_phase.webp"><img src="../../assets/img/slip/kumamoto_2026/fits_phase.webp" alt="Data, model and residual for the 2026 Kumamoto earthquake: interferograms" loading="lazy"></a>
+            <figcaption><strong>Fits: interferograms.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms. On the full data the residual is 26&ndash;41 mm at 2&ndash;3 km from the trace, 15&ndash;21 mm at 5&ndash;10 km and 13&ndash;32 mm beyond, against 80&ndash;140 mm of signal at 5&ndash;10 km. Leaving any one track out moves the slip by at most 0.08 m rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/kumamoto_2026/uncertainty.webp"><img src="../../assets/img/slip/kumamoto_2026/uncertainty.webp" alt="Uncertainty of slip for the 2026 Kumamoto earthquake" loading="lazy"></a>
+            <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise is taken as measured on its residual beyond 10 km of the fault (11&ndash;21 mm, correlated over 4&ndash;13 km) and propagated through the final inversion, linearised about its solution. It does not include the choices of bottom and geometry.</figcaption>
           </figure>
         </details>
       </article>
@@ -518,12 +571,12 @@
 
       <div class="page-note">
         <p>These models are research products and will change as the data and methods improve. Last updated
-        4 November 2026.</p>
+        6 November 2026.</p>
         <p>Data: NISAR (NASA/ISRO) through the Alaska Satellite Facility; ALOS-2 (JAXA); Copernicus Sentinel-1 (ESA),
         with interferograms from COMET LiCSAR and offsets from Ou, Lazecký, Watson, Maghsoudi and Wright (2024, CEDA);
         Copernicus Sentinel-2 (ESA), with offsets for Ridgecrest from Valkaniotis (2019, Zenodo); ALOS-2 and Sentinel-1
         interferograms for Ridgecrest and Kaikōura from Xu, Tong, Sandwell and colleagues (UC San Diego); the Kaikōura
-        3-D displacement field from Xu et al. (2026, Zenodo); fault traces for Kaikōura from Xu et al. (2018) and for
+        3-D displacement field from Xu et al. (2026, Zenodo); the Kumamoto 3-D displacement field (doi:10.57499/GSI_SAR_2026_001) and fault trace from the Geospatial Information Authority of Japan; fault traces for Kaikōura from Xu et al. (2018) and for
         Ridgecrest from Valkaniotis (2019) and Ponti et al. (2020, USGS); GNSS from the Nevada Geodetic Laboratory;
         earthquake parameters from the USGS. Maps: shaded relief from GMT's
         earth_relief (SRTM15+ and SRTM), coastlines and borders from GSHHG.</p>
