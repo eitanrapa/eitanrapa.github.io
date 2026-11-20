@@ -402,17 +402,18 @@
           <dt>Date</dt>
           <dd>6 February 2023; Mw 7.8 (01:17 UTC) and Mw 7.7 (10:24 UTC)</dd>
           <dt>Our model</dt>
-          <dd>Mw 7.84 and 7.69; peak slip 8.0 m (Pazarcık segment) and 8.4 m (Çardak fault)</dd>
+          <dd>Mw 7.84 and 7.68; peak slip 8.5 m (Pazarcık segment) and 8.5 m (Çardak fault)</dd>
           <dt>Faults</dt>
           <dd>The East Anatolian Fault (Amanos, Pazarcık and Erkenek segments, vertical), the Narlı fault, the Çardak
           fault (dipping 65° north) and a north&ndash;south strand, to 26 km depth; the dips and depth chosen by
           cross-validation</dd>
           <dt>Data</dt>
-          <dd>Sentinel-1 range and azimuth offsets on four tracks (Ou et al., 2024), Sentinel-1 interferograms on five
-          tracks in the far field (COMET LiCSAR), and GNSS for each event separately (Nevada Geodetic Laboratory)</dd>
+          <dd>Sentinel-1 range and azimuth offsets on four tracks and Sentinel-2 east and north offsets (Ou et al., 2024),
+          Sentinel-1 interferograms on five tracks in the far field (COMET LiCSAR), and GNSS for each event separately
+          (Nevada Geodetic Laboratory)</dd>
           <dt>Download</dt>
           <dd><a href="../../assets/data/slip/turkiye_2023_slip_model.zip">The slip model</a>: the nodes and triangles of its
-          mesh with their slip, as CSV, and a README with the conventions (zip, 0.19 MB)</dd>
+          mesh with their slip, as CSV, and a README with the conventions (zip, 0.15 MB)</dd>
         </dl>
         <figure class="slip-figure">
           <a href="../../assets/img/slip/turkiye_2023/slip.webp"><img src="../../assets/img/slip/turkiye_2023/slip.webp" alt="Slip on the fault sheets of the 2023 Kahramanmaraş earthquake doublet, and a map of their traces" loading="lazy"></a>
@@ -430,7 +431,11 @@
           </figure>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/turkiye_2023/gnss_offsets.webp"><img src="../../assets/img/slip/turkiye_2023/gnss_offsets.webp" alt="GNSS displacements and pixel offsets for the 2023 Kahramanmaraş earthquake doublet" loading="lazy"></a>
-            <figcaption><strong>GNSS and pixel offsets.</strong> (A, B) GNSS displacements for each event (Nevada Geodetic Laboratory), observed (black) and fitted by our model (red); the longest arrows are shortened and labelled with their length. Below, each track's range and azimuth offsets (Ou et al., 2024), each map's median removed, without the pixels whose own uncertainty exceeds twice the median. Both are fitted by the model.</figcaption>
+            <figcaption><strong>GNSS and pixel offsets.</strong> (A, B) GNSS displacements for each event (Nevada Geodetic Laboratory), observed (black) and fitted by our model (red); the longest arrows are shortened and labelled with their length. Below, each track's range and azimuth offsets (Ou et al., 2024), each map's median removed, without the pixels whose own uncertainty exceeds twice the median. Both are fitted by the model; so are the Sentinel-2 offsets in the next figure.</figcaption>
+          </figure>
+          <figure class="slip-figure">
+            <a href="../../assets/img/slip/turkiye_2023/offsets_corrected.webp"><img src="../../assets/img/slip/turkiye_2023/offsets_corrected.webp" alt="Sentinel-2 offsets of the 2023 Kahramanmaraş earthquake doublet, as processed and with the inversion's planes removed" loading="lazy"></a>
+            <figcaption><strong>Sentinel-2 offsets.</strong> The east and north offsets (Ou et al., 2024) (A) as processed, each map's median removed, and (B) with the plane the inversion fitted to each removed, on one colour scale, without the pixels whose own uncertainty exceeds twice the median. The north offsets' plane carries a constant of about 1.9 m. The north-north-east stripes are in the product itself; a plane does not remove them. The planes fitted to the Sentinel-1 offsets vary by 0.08&ndash;0.22 m across their samples, less than each series' noise, and are not shown.</figcaption>
           </figure>
         </details>
         <details class="slip-more">
@@ -444,12 +449,16 @@
             <figcaption><strong>Fits: azimuth offsets.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
           </figure>
           <figure class="slip-figure">
+            <a href="../../assets/img/slip/turkiye_2023/fits_s2.webp"><img src="../../assets/img/slip/turkiye_2023/fits_s2.webp" alt="Data, model and residual for the 2023 Kahramanmaraş earthquake doublet: Sentinel-2 offsets" loading="lazy"></a>
+            <figcaption><strong>Fits: Sentinel-2 offsets.</strong> The east and north samples: (A) the data with the inversion's plane removed, (B) the model's fault part and (C) the residual, with its rms.</figcaption>
+          </figure>
+          <figure class="slip-figure">
             <a href="../../assets/img/slip/turkiye_2023/fits_phase.webp"><img src="../../assets/img/slip/turkiye_2023/fits_phase.webp" alt="Data, model and residual for the 2023 Kahramanmaraş earthquake doublet" loading="lazy"></a>
             <figcaption><strong>Fits: interferograms, far field.</strong> Each track's samples: (A) the data with the inversion's ramp removed, (B) the model's fault part and (C) the residual, with its rms; track 094D's two frames share a row.</figcaption>
           </figure>
           <figure class="slip-figure">
             <a href="../../assets/img/slip/turkiye_2023/uncertainty.webp"><img src="../../assets/img/slip/turkiye_2023/uncertainty.webp" alt="Uncertainty of slip for the 2023 Kahramanmaraş earthquake doublet" loading="lazy"></a>
-            <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each track's noise covariance is fitted to its residuals by restricted maximum likelihood and propagated through the final inversion, linearised about its solution.</figcaption>
+            <figcaption><strong>Uncertainty.</strong> One standard deviation of slip magnitude from data noise, with the slip contours. Each series' noise is taken as measured on its residual beyond 10 km of the faults (interferograms 2&ndash;14 mm, correlated over 7.5&ndash;46.5 km; Sentinel-1 offsets 0.17&ndash;0.89 m, over 1.5 km; Sentinel-2 offsets 0.57&ndash;0.95 m, over 11&ndash;15 km), each GNSS set independent at its residual rms, and propagated through the final inversion, linearised about its solution. It does not include the choices of geometry and crust.</figcaption>
           </figure>
         </details>
       </article>
